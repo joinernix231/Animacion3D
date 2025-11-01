@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Solar 3D - Proyecto CG</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <canvas id="scene"></canvas>
+        
+        <!-- Panel de información -->
+        <div id="info-panel" class="hidden">
+            <div class="info-content">
+                <h2 id="planet-name"></h2>
+                <p id="planet-description"></p>
+                <button id="close-btn">Cerrar</button>
+            </div>
+        </div>
+
+        <!-- Panel de controles -->
+        <div id="controls-panel">
+            <h3>Controles</h3>
+            <div class="control-item">
+                <label>Velocidad de animación:</label>
+                <input type="range" id="speed-control" min="0" max="5" value="1" step="0.1">
+                <span id="speed-value">1.0x</span>
+            </div>
+            <div class="control-item">
+                <label>Mostrar órbitas:</label>
+                <input type="checkbox" id="show-orbits" checked>
+            </div>
+            <div class="control-item">
+                <label>Mostrar nombres:</label>
+                <input type="checkbox" id="show-names" checked>
+            </div>
+            <div class="instructions">
+                <p><strong>Controles:</strong></p>
+                <p>• Click izquierdo + arrastrar: rotar cámara</p>
+                <p>• Rueda mouse: zoom in/out</p>
+                <p>• Click derecho + arrastrar: mover cámara</p>
+                <p>• Click planeta: ver info</p>
+            </div>
+        </div>
+
+        <!-- Título -->
+        <div id="title">
+            <h1>Sistema Solar Interactivo</h1>
+            <p>Visualización 3D con Three.js</p>
+        </div>
+    </div>
+
+    <!-- Three.js desde CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+
